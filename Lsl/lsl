@@ -1,0 +1,22 @@
+#!/bin/bash
+# lsl - Gerenciador de Módulos Lsl-lib
+
+if [ "$1" == "install" ]; then
+    REPO=$2
+    FOLDER_NAME=$(echo $REPO | cut -d'/' -f2 | sed 's/\.git//g')
+
+    echo "📥 Baixando módulo do Stoat/Lsl-lib: $REPO..."
+    mkdir -p modules
+
+    # Se a pasta já existir, limpa para atualizar
+    rm -rf "./modules/$FOLDER_NAME"
+
+    git clone "https://github.com/$REPO.git" "./modules/$FOLDER_NAME"
+
+    # Remove a pasta .git interna do módulo para evitar conflitos de submoduli
+    rm -rf "./modules/$FOLDER_NAME/.git"
+
+    echo "✅ Módulo '$FOLDER_NAME' instalado com sucesso na pasta modules/!"
+else
+    echo "Uso: lsl install usuario/repositorio"
+fi
