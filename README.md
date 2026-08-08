@@ -12,7 +12,7 @@ The interpreter is written in JavaScript and uses "stoat.js" internally.
 
 Example
 
-''const { Client } = require("stoat.js");
+```const { Client } = require("stoat.js");
 
 const client = new Client();
 
