@@ -1,3 +1,16 @@
+# Modules
+
+LSL-LIB also provides a simple module manager:
+
+./lsl install user/repository
+
+Modules are installed inside the "modules/" directory.
+
+License
+
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+
+
 LSL-LIB
 
 What is LSL-LIB?
@@ -10,7 +23,7 @@ LSL-LIB mixes both structures: the syntax and structure inspired by Lua with the
 
 The interpreter is written in JavaScript and uses "stoat.js" internally.
 
-Example
+# Example
 
 ```const { Client } = require("stoat.js");
 
@@ -22,14 +35,5 @@ client.on("ready", () => {
 
 client.loginBot("YOUR_TOKEN");
 
-Modules
 
-LSL-LIB also provides a simple module manager:
 
-./lsl install user/repository
-
-Modules are installed inside the "modules/" directory.
-
-License
-
-This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
