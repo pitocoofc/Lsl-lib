@@ -1,0 +1,9 @@
+{
+  "name": "lsl-lib",
+  "version": "1.0.0",
+  "description": "Lua Stoat Lua-Library - Uma lib leve e elegante para bots no Stoat",
+  "main": "index.js",
+  "dependencies": {
+    "revolt.js": "^6.0.0"
+  }
+}
